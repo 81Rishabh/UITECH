@@ -1,0 +1,61 @@
+:root {
+  --primary: rgba(255, 68, 0, 0.738);
+  --white: #fff;
+  --success: rgb(23, 209, 23); }
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
+
+body {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; }
+
+header {
+  background-color: orangered;
+  height: 50px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center; }
+  header #nav-brand {
+    color: #fff;
+    font-weight: 600;
+    letter-spacing: 1.4px; }
+  header #right-block a {
+    margin: 0 1rem;
+    text-decoration: none;
+    color: #fff; }
+
+.container {
+  width: 50%;
+  display: block;
+  margin: auto;
+  padding: 1rem 0; }
+
+.container .form-control {
+  width: 50%;
+  display: block;
+  margin: auto;
+  padding: .5rem 0 1rem 1rem;
+  background: #ffffff;
+  box-shadow: 0px 5px 9px 1px #ececec;
+  line-height: 2;
+  border-bottom: 1px solid var(--primary); }
+  .container .form-control h3 {
+    color: #0b2f44;
+    font-size: 1.5rem; }
+  .container .form-control input[type="text"], .container .form-control input[type="password"] {
+    width: 80%;
+    padding: 1rem .4rem;
+    margin: .5rem 0rem; }
+  .container .form-control label[for="role"] {
+    color: var(--primary);
+    font-size: .8rem; }
+  .container .form-control label[for="html"] {
+    font-size: .8rem; }
+  .container .form-control button {
+    padding: .6rem;
+    border: none;
+    background: var(--primary);
+    color: var(--white);
+    cursor: pointer; }
