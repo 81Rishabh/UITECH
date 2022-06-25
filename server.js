@@ -5,12 +5,13 @@ const dotenv = require('dotenv');
 const path = require('path');
 const DbConnect = require('./config/db');
 dotenv.config({ path: path.resolve(__dirname, './.env') });
+const passport = require('passport');
+const passportLocal = require('./config/passport-local'); 
 const MongoStore = require('connect-mongo');
 const session = require('express-session');
 const sassMidileware = require('node-sass-middleware');
 const expressLayouts = require('express-ejs-layouts');
-const passport = require('passport');
-const passportLocal = require('./config/passport-local'); 
+
 
 // setup scss
 // scss midileware

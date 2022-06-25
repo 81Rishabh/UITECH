@@ -8,9 +8,8 @@ passport.use(
         usernameField : 'email',
         passReqToCallback : true
     },
-    function (email, password, done) {
+    function (req,email, password, done) {
       Employee.findOne({ email: email }, function (err, employee) {
-      
         if (err) {
           return done(err);
         }
@@ -18,7 +17,7 @@ passport.use(
         if (!employee || password != employee.password) {
           return done(null, false);
         }
-        console.log(employee);
+
         return done(null, employee);
       });
     }
@@ -28,7 +27,7 @@ passport.use(
 // serializing tha user to descide which key to kept
 
 passport.serializeUser(function (employee, done) {
-  done(null, employee.id);
+     done(null, employee.id);
 });
 
 // deserializing the user from the key in the cookie

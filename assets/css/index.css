@@ -1,5 +1,6 @@
 :root {
   --primary: rgba(255, 68, 0, 0.738);
+  --secondary: rgb(11, 47, 68);
   --white: #fff;
   --success: rgb(23, 209, 23); }
 
@@ -59,3 +60,61 @@ header {
     background: var(--primary);
     color: var(--white);
     cursor: pointer; }
+
+#dashboard {
+  display: flex;
+  align-items: stretch; }
+  #dashboard aside {
+    width: 30%;
+    background-color: white;
+    height: 93vh;
+    overflow-y: auto; }
+    #dashboard aside #heading {
+      color: #e8e8e8;
+      padding: .5rem;
+      background: var(--secondary);
+      display: inline-block;
+      margin: 1rem 0 0 1rem;
+      font-size: .7rem; }
+    #dashboard aside .container {
+      width: 100%; }
+    #dashboard aside .container .form-control {
+      width: 100%;
+      box-shadow: none !important;
+      border-bottom: none; }
+      #dashboard aside .container .form-control label {
+        font-size: 12px;
+        font-weight: 600;
+        color: darkblue; }
+      #dashboard aside .container .form-control input[type="date"] {
+        width: 80%;
+        height: 30px;
+        font-family: sans-serif;
+        font-size: .7rem; }
+      #dashboard aside .container .form-control .form-control-group {
+        margin-bottom: 12px;
+        padding: 1rem 0;
+        border-top: 1px solid whitesmoke;
+        border-bottom: 1px solid whitesmoke;
+        line-height: 2.5; }
+        #dashboard aside .container .form-control .form-control-group .label-heading {
+          color: grey;
+          font-weight: 400;
+          font-size: .9rem; }
+        #dashboard aside .container .form-control .form-control-group #scors-blocks {
+          display: flex;
+          justify-content: space-around;
+          align-items: center; }
+      #dashboard aside .container .form-control select {
+        width: 80%; }
+      #dashboard aside .container .form-control #collage-names, #dashboard aside .container .form-control #Placed-detail, #dashboard aside .container .form-control #companies-names {
+        height: 40px;
+        padding: .6rem; }
+      #dashboard aside .container .form-control .scores {
+        width: 100px;
+        height: 40px;
+        padding-left: 10px;
+        border: 1px solid lightgrey; }
+  #dashboard main {
+    width: 70%;
+    background: #f9f9f9; }

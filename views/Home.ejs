@@ -1,3 +1,80 @@
 <body>
-  
+    <section id="dashboard">
+        <aside>
+            <h4 id="heading">Fill Student Details</h4>
+            <div class="container">
+                <div class="form-control">
+                 <form action="/employee/create-students" method="post">
+                      <div class="form-control-group">
+                        <label for="batch">Batch</label><br>
+                        <input type="date" id="batch" name="batch" /><br>
+                      </div>
+                      <div class="form-control-group">
+                        <h4 class="label-heading">Student Information</h4>
+                        <label for="collage">Student Name</label><br>
+                        <input type="text" name="username" placeholder="Enter your username"> <br>      
+                        <label for="collage">Student Email</label><br>             
+                        <input type="text" name="email" placeholder="Enter your email"> <br>                   
+                        <label for="collage">Select Collage</label><br>
+                        <select name="collage" id="collage-names">
+                            <option value="">select collage</option>
+                            <option value="oriental insitute of science and technology">Oriental insitute of science and technology , Bhopal</option>
+                            <option value="oriental insitute of science and technology">Laxmi narayan insitute of science and technology , Bhopal</option>
+                            <option value="oriental insitute of science and technology">sage group insitute of science and technology , Bhopal</option>
+                            <option value="oriental insitute of science and technology">Ranjeet Singh insitute of science and technology , Indore</option>
+                        </select><br>
+                        <label for="Placed">Student got placed?</label><br>
+                        <select name="isPlaced" id="Placed-detail">
+                            <option value="true">Placed</option>
+                            <option value="false">Not Placed</option>
+                        </select>
+                      </div>
+                      <div class="form-control-group">
+                        <h4 class="label-heading">Course Information</h4>
+                         <div id="scors-blocks">
+                            <div>
+                                <label for="collage">DSA  Score</label><br>
+                                <input type="number" name="dsa-score" value="0" class="scores"><br>
+                            </div>
+                            <div>
+                                <label for="collage">Web Development  Score</label><br>
+                                <input type="number" name="dsa-score" value="0" class="scores"><br>
+                            </div>
+                            <div>
+                                <label for="collage">ReactJs Score</label><br>
+                                <input type="number" name="dsa-score" value="0" class="scores"><br>
+                            </div>
+                         </div>
+                      </div>
+                      <div class="form-control-group">
+                        <h4 class="label-heading">Interviews</h4>
+                        <label for="company">Select Company</label><br>
+                        <select name="companies" id="companies-names">
+                           <option value="amazon">Amazone , India</option>
+                           <option value="amazon">TCS</option>
+                           <option value="amazon">Infosys , India</option>
+                           <option value="amazon">Walmart</option>
+                           <option value="amazon">Microsoft</option>
+                           <option value="amazon">DeShaw</option>
+                        </select><br>
+                        <label for="date">Date</label><br>
+                        <input type="date" id="interview-date" name="date" /><br>
+                      </div>
+                      <div class="form-control-group">
+                        <h4 class="label-heading">Results</h4>
+                        <label for="result">Result</label><br>
+                        <select name="companies" id="companies-names">
+                           <option value="pass">Pass</option>
+                           <option value="fail">Fail</option>
+                           <option value="hold">Hold</option>
+                        </select>
+                      </div>
+                      <button type="submit" style="background-color : var(--secondary)">Add Details</button> 
+                 </form>
+                </div> 
+            </div> 
+        </aside>
+        <main>
+        </main>
+     </section>
 </body>
