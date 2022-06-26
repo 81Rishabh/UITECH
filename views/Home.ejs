@@ -1,7 +1,10 @@
 <body>
     <section id="dashboard">
-        <aside>
+        <aside id="aside">
+           <div id="aside-header">
             <h4 id="heading">Fill Student Details</h4>
+            <span id="close">X</span>
+           </div>
             <div class="container">
                 <div class="form-control">
                  <form action="/employee/create-students" method="post">
@@ -34,22 +37,23 @@
                          <div id="scors-blocks">
                             <div>
                                 <label for="collage">DSA  Score</label><br>
-                                <input type="number" name="dsa-score" value="0" class="scores"><br>
+                                <input type="number" name="dsa_score" class="scores"><br>
                             </div>
                             <div>
                                 <label for="collage">Web Development  Score</label><br>
-                                <input type="number" name="dsa-score" value="0" class="scores"><br>
+                                <input type="number" name="web_dev_score" class="scores"><br>
                             </div>
                             <div>
                                 <label for="collage">ReactJs Score</label><br>
-                                <input type="number" name="dsa-score" value="0" class="scores"><br>
+                                <input type="number" name="reactjs_score"  class="scores"><br>
                             </div>
                          </div>
                       </div>
                       <div class="form-control-group">
                         <h4 class="label-heading">Interviews</h4>
                         <label for="company">Select Company</label><br>
-                        <select name="companies" id="companies-names">
+                        <select name="company" id="companies-names">
+                           <option value="">Select Company</option>
                            <option value="amazon">Amazone , India</option>
                            <option value="amazon">TCS</option>
                            <option value="amazon">Infosys , India</option>
@@ -58,12 +62,12 @@
                            <option value="amazon">DeShaw</option>
                         </select><br>
                         <label for="date">Date</label><br>
-                        <input type="date" id="interview-date" name="date" /><br>
+                        <input type="date" id="interview-date" name="interview_date" /><br>
                       </div>
                       <div class="form-control-group">
                         <h4 class="label-heading">Results</h4>
                         <label for="result">Result</label><br>
-                        <select name="companies" id="companies-names">
+                        <select name="result" id="companies-names">
                            <option value="pass">Pass</option>
                            <option value="fail">Fail</option>
                            <option value="hold">Hold</option>
@@ -74,7 +78,15 @@
                 </div> 
             </div> 
         </aside>
-        <main>
+        <main id="main-container">
+          <h3 style="float:left;">Students</h3>
+          <div id="main-header">
+            <a href="/employee/download">
+              <h4 id="heading">Download CSV</h4> 
+            </a>
+            <h4 id="heading" onclick="openSidebar()">Add New</h4> 
+          </div>
+           <%- include('students.ejs')  %> 
         </main>
      </section>
 </body>

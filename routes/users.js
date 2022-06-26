@@ -17,4 +17,7 @@ router.post(
   authController.createSession
 );
 
+// loggin out (destroing session)
+router.get('/sign-out' , authController.destroySession);
+
 module.exports = router;

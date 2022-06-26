@@ -1,0 +1,38 @@
+<div class="student-container">
+    <table>
+        <tr>
+          <th>Name</th>
+          <th>Email</th>
+          <th>Collage</th>
+          <th>Batch</th>
+          <th>Placed</th>
+          <th>DSA</th>
+          <th>Web Dev</th>
+          <th>Raactjs</th>
+          <th>Interview company</th>
+          <th>Interview Date</th>
+          <th>Result</th>
+        </tr>
+        <% for( student of students) { %>
+            <tr>
+                <td><%= student.username %> </td>
+                <td><%= student.email  %> </td>
+                <td><%= student.collage %> </td>
+                <td><%= new Date().toLocaleDateString(student.batch) %> </td>
+                <td>
+                    <% if (student.isPlaced) { %>
+                       Yes
+                    <% } else{%>
+                       No     
+                   <%}%>
+                </td>
+                <td><%= student.scores.dsa_score %> </td>
+                <td><%= student.scores.web_dev_score %> </td>
+                <td><%= student.scores.reactjs_score %> </td>
+                <td><%= student.interview.company %> </td>
+                <td><%=  new Date().toLocaleDateString(student.interview.interview_date)%> </td>
+                <td><%= student.result %> </td>
+            </tr>
+            <% } %>
+      </table>
+</div>

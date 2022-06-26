@@ -1,180 +1,239 @@
-  
-  :root {
-    --primary : rgba(255, 68, 0, 0.738);
-    --secondary : rgb(11, 47, 68);
-    --white : #fff;
-    --success : rgb(23, 209, 23);
-  }
-  
+:root {
+  --primary: rgba(255, 68, 0, 0.738);
+  --secondary: rgb(11, 47, 68);
+  --white: #fff;
+  --success: rgb(23, 209, 23);
+}
+
 * {
-    margin : 0;
-    padding : 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 body {
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
 }
 
 header {
-   background-color : orangered;
-   height : 50px;
-    display : flex;
-   justify-content : space-around;
-   align-items : center;
+  background-color: rgb(91, 48, 185);
+  height: 50px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width : 100%;
 
-//    heading style 
-    #nav-brand {
-        color: #fff;
-        font-weight: 600;
-        letter-spacing: 1.4px;
+  //    heading style
+  #nav-brand {
+    color: #fff;
+    font-weight: 600;
+    letter-spacing: 1.4px;
+  }
+
+  // right block style
+  #right-block {
+    a {
+      margin: 0 1rem;
+      text-decoration: none;
+      color: #fff;
     }
-
-    // right block style 
-    #right-block {
-        a {
-            margin : 0 1rem;
-            text-decoration: none;
-            color : #fff;
-        }
-    }
-
+  }
 }
 
-// authenticaion page style 
+// authenticaion page style
 .container {
-    width : 50%;
-    display: block;
-    margin : auto;
-    padding: 1rem 0;
+  width: 50%;
+  display: block;
+  margin: auto;
+  padding: 1rem 0;
+}
+
+.container .form-control {
+  width: 50%;
+  display: block;
+  margin: auto;
+  padding: 0.5rem 0 1rem 1rem;
+  background: #ffffff;
+  box-shadow: 0px 5px 9px 1px rgb(236, 236, 236);
+  line-height: 2;
+  border-bottom: 1px solid var(--primary);
+
+  h3 {
+    color: rgb(11, 47, 68);
+    font-size: 1.5rem;
   }
-  
-  .container .form-control {
-     width : 50%;
-     display : block;
-     margin : auto;
-     padding: .5rem 0 1rem 1rem;
-     background: #ffffff;
-     box-shadow: 0px 5px 9px 1px rgb(236, 236 ,236);
-     line-height: 2;
-     border-bottom: 1px solid var(--primary);
-  
-     h3 {
-       color: rgb(11, 47, 68);
-       font-size: 1.5rem;
-     }
-  
-     input[type="text"], input[type="password"]{
-       width : 80%;
-       padding : 1rem .4rem;
-       margin : .5rem 0rem;
-     }
-    
-     label[for="role"] {
-        color: var(--primary);
-        font-size: .8rem;
-     }
-  
-     label[for="html"] {
-       font-size: .8rem;
-     }
-  
-     button {
-        padding: .6rem;
-        border: none;
-        background: var(--primary);
-        color: var(--white);
-        cursor: pointer;
-     }
+
+  input[type="text"],
+  input[type="password"] {
+    width: 80%;
+    padding: 1rem 0.4rem;
+    margin: 0.5rem 0rem;
   }
-     
+
+  label[for="role"] {
+    color: var(--primary);
+    font-size: 0.8rem;
+  }
+
+  label[for="html"] {
+    font-size: 0.8rem;
+  }
+
+  button {
+    padding: 0.6rem;
+    border: none;
+    background: var(--primary);
+    color: var(--white);
+    cursor: pointer;
+  }
+}
 
 //   dashboard style style
 
 #dashboard {
-    display : flex;
-    align-items : stretch;
+  display: flex;
+  align-items: stretch;
+  height : 100%;
+ 
+  aside {
+    width: 40%;
+    background-color: rgb(255, 255, 255);
+    height: 93vh;
+    overflow-y: auto;
   
-    aside {
-        width : 30%;
-        background-color : rgb(255, 255, 255);
-        height : 93vh;
-        overflow-y: auto;
-
-        // heading styling
-        #heading { 
-            color: rgb(232, 232, 232);  
-            padding:.5rem;
-            background: var(--secondary);
-            display : inline-block;
-            margin : 1rem 0 0 1rem;
-            font-size: .7rem;
-         }
+    transform: translateX(-500px);
+    display : none;
+    
+    #aside-header {
        
-        .container {
-            width : 100%;
-        }
+       display: flex;
+       justify-content: space-between;
+       align-items : center;
 
-        .container .form-control {
-            width : 100%;
-            box-shadow: none !important;
-            border-bottom: none;
-
-            label {
-                font-size: 12px;
-                font-weight: 600;
-                color: darkblue;
-             }
-
-             input[type="date"] {
-                width : 80%;
-                height : 30px;
-                font-family: sans-serif;
-                font-size: .7rem;
-             }
-
-             .form-control-group {
-                margin-bottom: 12px;
-                padding : 1rem 0;
-                .label-heading {
-                    color: grey;
-                   font-weight: 400;
-                   font-size: .9rem;
-                }
-                border-top: 1px solid whitesmoke;
-                border-bottom: 1px solid whitesmoke;
-                line-height: 2.5;
-
-                #scors-blocks {
-                    display: flex;
-                    justify-content : space-around;
-                    align-items :center;
-                }
-             }
-            
-             select{
-                width : 80%;
-             }
-             #collage-names , #Placed-detail , #companies-names {
-                height:40px;
-                padding: .6rem;
-             }
-
-             .scores  {
-                width : 100px;
-                height : 40px;
-                padding-left: 10px;
-                border: 1px solid lightgrey;
-             }
-
-           
-        }
+       span {
+         margin-right: 2rem;
+         font-weight: bold;
+         cursor: pointer;
+       }
+    }
+    // heading styling
+    #heading {
+      color: rgb(232, 232, 232);
+      padding: 0.5rem;
+      background: var(--secondary);
+      display: inline-block;
+      margin: 1rem 0 0 1rem;
+      font-size: 0.7rem;
     }
 
-    main {
-        width : 70%;
-        background: rgb(249, 249, 249);
-
+    .container {
+      width: 100%;
     }
+
+    .container .form-control {
+      width: 100%;
+      box-shadow: none !important;
+      border-bottom: none;
+
+      label {
+        font-size: 12px;
+        font-weight: 600;
+        color: darkblue;
+      }
+
+      input[type="date"] {
+        width: 80%;
+        height: 30px;
+        font-family: sans-serif;
+        font-size: 0.7rem;
+      }
+
+      .form-control-group {
+        margin-bottom: 12px;
+        padding: 1rem 0;
+        .label-heading {
+          color: grey;
+          font-weight: 400;
+          font-size: 0.9rem;
+        }
+        border-top: 1px solid whitesmoke;
+        border-bottom: 1px solid whitesmoke;
+        line-height: 2.5;
+
+        #scors-blocks {
+          display: flex;
+          justify-content: space-around;
+          align-items: center;
+        }
+      }
+
+      select {
+        width: 80%;
+      }
+      #collage-names,
+      #Placed-detail,
+      #companies-names {
+        height: 40px;
+        padding: 0.6rem;
+      }
+
+      .scores {
+        width: 100px;
+        height: 40px;
+        padding-left: 10px;
+        border: 1px solid lightgrey;
+      }
+    }
+  }
+
+  main {
+    width: 100%;
+    background: rgb(249, 249, 249);
+    padding: 1rem;
+
+    #main-header {
+      display: flex;
+      justify-content: flex-end;
+      align-items : center;
+
+      #heading {
+        color: rgb(232, 232, 232);
+        padding: 0.5rem;
+        background: rgb(27, 62, 204);
+        display: inline-block;
+        margin: 1rem 0 0 1rem;
+        font-size: 0.7rem;
+        cursor: pointer;
+      }
+    }
+    // table styling
+    .student-container {
+      margin-top: 10px;
+      
+      table {
+        font-family: arial, sans-serif;
+        border-collapse: collapse;
+        width: 100%;
+      }
+
+      th {
+        background-color : #000;
+        color : #fff;
+      }
+
+      td,
+      th {
+        border: 1px solid #dddddd;
+        text-align: left;
+        padding: 8px;
+        font-weight: 600;
+        font-size: .8rem;
+      } 
+      td {
+        font-weight: 400;
+        background : #fff;
+      }
+    }
+  }
 }
-

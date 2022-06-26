@@ -35,8 +35,15 @@ module.exports.create = async function (req, res) {
     }
 }
 
-// contorller for creating session s
-
+// contorller for creating session 
 module.exports.createSession = function(req , res) {
     return res.redirect('/');
+}
+
+//  destroy session
+module.exports.destroySession = function(req,res , next){
+    req.logout(function(err) {
+      if (err) { return next(err); }
+      res.redirect('/');
+    });
 }

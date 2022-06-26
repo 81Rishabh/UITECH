@@ -10,7 +10,7 @@ const studentSchema = new mongoose.Schema({
     required: true,
   },
   batch: {
-    type: Date,
+    type : Date,
     required: true,
   },
   collage: {
@@ -20,7 +20,7 @@ const studentSchema = new mongoose.Schema({
     type: Boolean,
     require: true,
   },
-  scores: [
+  scores: 
     {
       dsa_score: {
         type: Number,
@@ -30,17 +30,16 @@ const studentSchema = new mongoose.Schema({
         type: Number,
         default: 0,
       },
-      react_js_score: {
-        tye: Number,
+      reactjs_score: {
+        type: Number,
         default: 0,
       },
     },
-  ],
   interview : {
     company : {
         type : String,
     },
-    date : {
+    interview_date : {
         type : Date
     }
   },
