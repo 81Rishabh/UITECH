@@ -9,7 +9,7 @@ that manages the student course related details and we can download student deta
     Assign interview to students
     
  #### Students view
-    List of Student having course relevent informations
+    List of Student having course relevent information
     
  1 login for only for employee
 
