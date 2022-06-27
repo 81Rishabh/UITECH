@@ -14,7 +14,7 @@ that manages the student course related details and we can download student deta
 
 
 #### Clone project
-    git clone https://github.com/81Rishabh/Employee-review-system.git
+    git clone https://github.com/81Rishabh/UITECH.git
     
 #### install dependencies
     npm install
