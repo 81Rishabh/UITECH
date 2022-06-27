@@ -6,7 +6,8 @@ that manages the student course related details and we can download student deta
  #### Admin view
     Add/view students
     Get student details into CSV format
-    Assign student to interview
+    Assign interview to students
+    
  #### Students view
     List of Student having course relevent informations
     
