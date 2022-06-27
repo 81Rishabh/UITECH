@@ -1,6 +1,6 @@
 :root {
   --primary: rgba(255, 68, 0, 0.738);
-  --secondary: rgb(11, 47, 68);
+  --secondary: rgb(38, 5, 107);
   --white: #fff;
   --success: rgb(23, 209, 23); }
 
@@ -11,6 +11,23 @@
 
 body {
   font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif; }
+
+#heading {
+  color: #e8e8e8;
+  padding: 0.5rem;
+  background: var(--secondary);
+  display: inline-block;
+  margin: 1rem 0 0 1rem;
+  font-size: 0.7rem;
+  cursor: pointer;
+  border-radius: 50px; }
+
+button {
+  padding: .4rem;
+  border: none;
+  background: var(--secondary);
+  color: var(--white);
+  cursor: pointer; }
 
 header {
   background-color: #5b30b9;
@@ -41,7 +58,7 @@ header {
   padding: 0.5rem 0 1rem 1rem;
   background: #ffffff;
   box-shadow: 0px 5px 9px 1px #ececec;
-  line-height: 2;
+  line-height: 1.8;
   border-bottom: 1px solid var(--primary); }
   .container .form-control h3 {
     color: #0b2f44;
@@ -82,13 +99,6 @@ header {
         margin-right: 2rem;
         font-weight: bold;
         cursor: pointer; }
-    #dashboard aside #heading {
-      color: #e8e8e8;
-      padding: 0.5rem;
-      background: var(--secondary);
-      display: inline-block;
-      margin: 1rem 0 0 1rem;
-      font-size: 0.7rem; }
     #dashboard aside .container {
       width: 100%; }
     #dashboard aside .container .form-control {

@@ -12,9 +12,11 @@
           <th>Interview company</th>
           <th>Interview Date</th>
           <th>Result</th>
+          <th>Select for Interview</th>
         </tr>
         <% for( student of students) { %>
             <tr>
+               <form action="/employee/createInterview/<%= student._id %>" method="post">
                 <td><%= student.username %> </td>
                 <td><%= student.email  %> </td>
                 <td><%= student.collage %> </td>
@@ -29,9 +31,37 @@
                 <td><%= student.scores.dsa_score %> </td>
                 <td><%= student.scores.web_dev_score %> </td>
                 <td><%= student.scores.reactjs_score %> </td>
-                <td><%= student.interview.company %> </td>
-                <td><%=  new Date().toLocaleDateString(student.interview.interview_date)%> </td>
+                <% if (student.interview.company == "") { %>
+                    <td>
+                        <select name="company" id="companies-names">
+                            <option value="">Select Company</option>
+                            <option value="amazon">Amazone , India</option>
+                            <option value="amazon">TCS</option>
+                            <option value="amazon">Infosys , India</option>
+                            <option value="amazon">Walmart</option>
+                            <option value="amazon">Microsoft</option>
+                            <option value="amazon">DeShaw</option>
+                         </select>
+                    </td>
+                <% } else {%>
+                    <td><%= student.interview.company %> </td>
+                  <%} %>
+                <% if (!student.interview.interview_date) { %>
+                   <td>
+                    <input type="date" id="interview-date" name="interview_date" /> 
+                   </td>
+                <% } else {%>
+                    <td>
+                        <%= new Date().toLocaleDateString(student.interview.interview_date) %>
+                    </td> 
+                 <%} %>
                 <td><%= student.result %> </td>
+                <td>
+                    <button type="submit">
+                        Select
+                    </button>   
+                </td>
+               </form>
             </tr>
             <% } %>
       </table>

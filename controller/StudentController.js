@@ -24,8 +24,7 @@ module.exports.create = async function (req, res) {
 
   // convert date into LocalDatString 
   let date = new Date(batch); 
-  let interviewDate = new Date(interview_date); 
-  
+ 
   try {
     await Student.create({
       username,
@@ -40,7 +39,7 @@ module.exports.create = async function (req, res) {
       },
       interview : {
          company,
-         interview_date : interviewDate.toDateString(),
+         interview_date
       },
       result,
     });
@@ -51,6 +50,26 @@ module.exports.create = async function (req, res) {
   }
 };
 
+
+// controller for createing interview by mentor 
+module.exports.createInterview = async function(req ,res) {
+    const ID = req.params.id;
+    let date = new Date(req.body.interview_date); 
+ 
+    try {
+      await Student.findByIdAndUpdate(ID , {
+        interview : {
+          company : req.body.company,
+          interview_date : date.toDateString()
+        }
+      });
+    
+      return res.redirect("back");
+    } catch (error) {
+      return res.redirect("back");
+    }
+   
+}
 
 // controller for download csv file
 module.exports.downlodeCSV = async function(req,res) {
